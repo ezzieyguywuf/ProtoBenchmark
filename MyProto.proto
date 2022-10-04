@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+enum Type {
+  TYPEI = 0;
+  TYPEII = 1;
+  TYPEIII = 2;
+}
+
+message Attributes {
+  Type type = 1;
+  string resource = 2;
+  string maybe_blank = 3;kj:
+  string also_maybe_blank = 4;
+}
+
+message MyProto {
+  int64 uid = 1;
+  int64 timestamp = 2;
+
+  map<string, string> metadata = 3;
+  Attributes attributes = 4;
+}
