@@ -9,7 +9,7 @@ enum Type {
 message Attributes {
   Type type = 1;
   string resource = 2;
-  string maybe_blank = 3;kj:
+  string maybe_blank = 3;
   string also_maybe_blank = 4;
 }
 
