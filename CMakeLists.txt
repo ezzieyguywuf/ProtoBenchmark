@@ -11,4 +11,8 @@ add_subdirectory(abseil-cpp)
 add_subdirectory(benchmark)
 
 add_executable(run main.cpp MyProto.pb.cc)
-target_link_libraries(run benchmark::benchmark ${PROTOBUF_LIBRARY} absl::statusor)
+target_link_libraries(run
+  benchmark::benchmark
+  ${PROTOBUF_LIBRARY}
+  absl::statusor
+  absl::log)
